@@ -15,6 +15,7 @@ workflows:
 
     artifacts:
       - $FCI_BUILD_DIR/app/build/outputs/apk/debug/*.apk
+      - $FCI_BUILD_DIR/app/build/outputs/apk/release/*.apk
       - $FCI_BUILD_DIR/build/**/outputs/**/*.aab
       - $FCI_BUILD_DIR/build/**/outputs/**/mapping.txt
       - $FCI_BUILD_DIR/app/build/**/outputs/**/*.apk
