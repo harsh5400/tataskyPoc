@@ -1,0 +1,24 @@
+# Automatically generated on 2020-05-19 UTC from https://codemagic.io/app/5ec3a9ca102001000b561777/settings
+# Note that this configuration is not an exact match to UI settings. Review and adjust as necessary.
+workflows:
+  default-workflow:
+    name: Native TataSky Workflow
+    max_build_duration: 60
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+    scripts:
+      - cd $FCI_BUILD_DIR
+      - pwd
+      - ./gradlew assembleRelease
+
+    artifacts:
+      - $FCI_BUILD_DIR/app/build/outputs/apk/debug/*.apk
+      - $FCI_BUILD_DIR/build/**/outputs/**/*.aab
+      - $FCI_BUILD_DIR/build/**/outputs/**/mapping.txt
+      - $FCI_BUILD_DIR/app/build/**/outputs/**/*.apk
+    publishing:
+      email:
+        recipients:
+          - harsh5400@gmail.com
