@@ -2,9 +2,11 @@ package com.harsh.tataskybinge;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import io.flutter.embedding.android.FlutterActivity;
 
@@ -16,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Button showButton = findViewById(R.id.btnShow);
+        View showButton = findViewById(R.id.btnShow);
 
 
         showButton.setOnClickListener(new View.OnClickListener() {
